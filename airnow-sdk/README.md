@@ -1,6 +1,6 @@
 Airnow Media SDK
 ======
-> **Android SDK 11.4.2 Documentation**
+> **Android SDK 11.4.3 Documentation**
 
 ## Overview
 The Airnow Media SDK is the most powerful app monetization solution in the industry, providing developers with fantastic performance and weekly payouts. Airnow Media developers are consistently achieving more revenue than alternative ad networks due to our advanced ad units that outperform other available solutions within the industry. This document covers installation instructions, available ad units and their features, optimization, and best practices. It is written for developers with the assumption that they are familiar with Android development.
