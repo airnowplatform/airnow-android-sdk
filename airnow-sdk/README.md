@@ -1,6 +1,6 @@
 Airnow Media SDK
 ======
-> **Android SDK 11.4.3 Documentation**
+> **Android SDK 11.4.4 Documentation**
 
 ## Overview
 The Airnow Media SDK is the most powerful app monetization solution in the industry, providing developers with fantastic performance and weekly payouts. Airnow Media developers are consistently achieving more revenue than alternative ad networks due to our advanced ad units that outperform other available solutions within the industry. This document covers installation instructions, available ad units and their features, optimization, and best practices. It is written for developers with the assumption that they are familiar with Android development.
@@ -428,6 +428,46 @@ AirnowSdk.isOptOutEnabled(context);
 ```
 
 If a user opts out, he will still see the same amount of Airnow Media ads on his mobile device; however, these ads may be less relevant because they will not be relevant to his interests.
+
+### Regulation Advanced Settings
+##### GDPR – Managing Consent
+The Airnow Media SDK supports a client API that allows publishers to pass consent on behalf of their end users.
+
+To use the Airnow Media API to update the user's consent status, use this function:
+
+```java
+AirnowSdk.setGdprConsent(state);
+```
+If the user has given consent, set the state `AirnowConsent.ACCEPTED`.
+If the user did not consent, set the state `AirnowConsent.REJECTED`.
+Otherwise, set the state to `AirnowConsent.NOCONSENT`.
+
+> **Note**: `AirnowConsent.NOCONSENT` is used as the default state.
+
+##### CCPA Compliance
+The Airnow Media SDK supports publishers to restrict the sale of end users personal information under the California Consumer Privacy Act (CCPA).
+
+If the user has opted out of “sale” of personal information:
+```java
+AirnowSdk.setCcpaConsent(false);
+```
+
+If “sale” of personal information is permitted:
+```java
+AirnowSdk.setCcpaConsent(true);
+```
+
+##### User-Level Settings for Child-Directed Apps with Age Gates
+The Airnow Media SDK enables publishers of child-directed apps to flag specific end-users as children, as may be permitted or required by applicable law (e.g. COPPA, GDPR, etc.).  Publishers of child-directed apps are responsible for determining whether an app is permitted to flag at the end-user level or must treat all end-users as children.  Publishers should consult with their legal counsel accordingly.
+
+If the end-user is a child (as defined by applicable regulations):
+```java
+AirnowSdk.setChildDirected(true);
+```
+If the end-user is not a child:
+```java
+AirnowSdk.setChildDirected(false);
+```
 
 ### Sample Application Code and Support
 You can download the demo project **"Android SDK Integration DemoApp"** using the following [link](https://github.com/airnowplatform/airnow-android-sdk-demo-app) . This is code demonstration on how to integrate Airnow Media Android SDK in your app.

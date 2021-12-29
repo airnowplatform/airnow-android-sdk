@@ -24,7 +24,7 @@ If you are using ProGuard with the Airnow Media SDK, you must add the following 
 ```gradle
 implementation files('libs/AirnowSdk-AdMob-Adapter.jar')
 ```
-#### Step 3 - Integrate the Google Mobile Ads SDK into your project
+##### Step 3 - Integrate the Google Mobile Ads SDK into your project
 Read the integration guide [here](https://developers.google.com/admob/android/quick-start).
 
 ##### Step 4 – Adding mediation
